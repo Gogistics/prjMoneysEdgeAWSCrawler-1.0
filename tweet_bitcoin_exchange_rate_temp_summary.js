@@ -77,17 +77,44 @@ var loop_through_files_and_tweet = function(){
 	var summary_lakebtc = get_bitcoin_exchange_rate_summary('/my_apps/apps_moneysedge/files/bitcoin/lakebtc/lakebtc_exchange_rate_' + yesterday + '.txt');
 	var summary_okcoin = get_bitcoin_exchange_rate_summary('/my_apps/apps_moneysedge/files/bitcoin/okcoin/okcoin_exchange_rate_' + yesterday + '.txt');
 	
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitfinex.start_rate + ' current_rate:$' + summary_bitfinex.close_rate + '(' + summary_bitfinex.change_percentage + '%)' + ' #bitfinex @MoneysEdge http://www.moneysedge.com/bitcoin');
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitstamp.start_rate + ' current_rate:$' + summary_bitstamp.close_rate + '(' + summary_bitstamp.change_percentage + '%)' + ' #bitstamp @MoneysEdge http://www.moneysedge.com/bitcoin');
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_e.start_rate + ' current_rate:$' + summary_btc_e.close_rate + '(' + summary_btc_e.change_percentage + '%)' + ' #btc_e @MoneysEdge http://www.moneysedge.com/bitcoin');
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_q.start_rate + ' current_rate:$' + summary_btc_q.close_rate + '(' + summary_btc_q.change_percentage + '%)' + ' #btc_q @MoneysEdge http://www.moneysedge.com/bitcoin');
+	//
+	var tweet_bitfinex = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitfinex.start_rate + ' current_rate:$' + summary_bitfinex.close_rate + '(' + summary_bitfinex.change_percentage + '%)' + ' #bitfinex @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_bistamp = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitstamp.start_rate + ' current_rate:$' + summary_bitstamp.close_rate + '(' + summary_bitstamp.change_percentage + '%)' + ' #bitstamp @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_btc_e = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_e.start_rate + ' current_rate:$' + summary_btc_e.close_rate + '(' + summary_btc_e.change_percentage + '%)' + ' #btc_e @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_btc_q = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_q.start_rate + ' current_rate:$' + summary_btc_q.close_rate + '(' + summary_btc_q.change_percentage + '%)' + ' #btc_q @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_bityes = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bityes.start_rate + ' current_rate:$' + summary_bityes.close_rate + '(' + summary_bityes.change_percentage + '%)' + ' #bityes @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_coinbase = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_coinbase.start_rate + ' current_rate:$' + summary_coinbase.close_rate + '(' + summary_coinbase.change_percentage + '%)' + ' #coinbase @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_coindesk = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_coindesk.start_rate + ' current_rate:$' + summary_coindesk.close_rate + '(' + summary_coindesk.change_percentage + '%)' + ' #coindesk @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_itbit = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_itbit.start_rate + ' current_rate:$' + summary_itbit.close_rate + '(' + summary_itbit.change_percentage + '%)' + ' #itbit @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_lakebtc = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_lakebtc.start_rate + ' current_rate:$' + summary_lakebtc.close_rate + '(' + summary_lakebtc.change_percentage + '%)' + ' #lakebtc @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_okcoin = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_okcoin.start_rate + ' current_rate:$' + summary_okcoin.close_rate + '(' + summary_okcoin.change_percentage + '%)' + ' #okcoin @MoneysEdge http://www.moneysedge.com/bitcoin';
 	
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_coinbase.start_rate + ' current_rate:$' + summary_coinbase.close_rate + '(' + summary_coinbase.change_percentage + '%)' + ' #coinbase @MoneysEdge http://www.moneysedge.com/bitcoin');
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_coindesk.start_rate + ' current_rate:$' + summary_coindesk.close_rate + '(' + summary_coindesk.change_percentage + '%)' + ' #coindesk @MoneysEdge http://www.moneysedge.com/bitcoin');
+	/* tweet summary
+	tweet_bitcoin_exchange_rate_summary( tweet_bitfinex );
+	tweet_bitcoin_exchange_rate_summary( tweet_bistamp );
+	tweet_bitcoin_exchange_rate_summary( tweet_btc_e );
+	tweet_bitcoin_exchange_rate_summary( tweet_btc_q );
+	tweet_bitcoin_exchange_rate_summary( tweet_bityes );
 	
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_itbit.start_rate + ' current_rate:$' + summary_itbit.close_rate + '(' + summary_itbit.change_percentage + '%)' + ' #itbit @MoneysEdge http://www.moneysedge.com/bitcoin');
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_lakebtc.start_rate + ' current_rate:$' + summary_lakebtc.close_rate + '(' + summary_lakebtc.change_percentage + '%)' + ' #lakebtc @MoneysEdge http://www.moneysedge.com/bitcoin');
-	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_okcoin.start_rate + ' current_rate:$' + summary_okcoin.close_rate + '(' + summary_okcoin.change_percentage + '%)' + ' #okcoin @MoneysEdge http://www.moneysedge.com/bitcoin');
+	tweet_bitcoin_exchange_rate_summary( tweet_coinbase);
+	tweet_bitcoin_exchange_rate_summary( tweet_coindesk );
+	
+	tweet_bitcoin_exchange_rate_summary( tweet_itbit );
+	tweet_bitcoin_exchange_rate_summary( tweet_lakebtc );
+	tweet_bitcoin_exchange_rate_summary( tweet_okcoin );
+	*/
+	console.log( tweet_bitfinex );
+	console.log( tweet_bitstamp );
+	console.log( tweet_btc_e );
+	console.log( tweet_btc_q );
+	console.log( tweet_bityes );
+
+	console.log( tweet_coinbase );
+	console.log( tweet_coindesk );
+
+	console.log( tweet_itbit );
+	console.log( tweet_lakebtc );
+	console.log( tweet_okcoin );
 	
 	// console.log(yesterday + ' start_rate:' + summary_bitstamp.start_rate + ' close_rate:' + summary_bitstamp.close_rate + ' change:' + summary_bitstamp.change_percentage + '%' + ' #bitstamp');
 }

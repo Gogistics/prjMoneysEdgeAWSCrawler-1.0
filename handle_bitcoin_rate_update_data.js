@@ -2,7 +2,7 @@ var request = require('request');
 request
   .get('http://www.moneysedge.com')
   .on('response', function(response) {
-	  console.log(response);
+	  console.log(response.toJSON());
 	  // console.log(response.headers['set-cookie'][0]);
 	  
 	  var crsf_token = response.headers['set-cookie'][0];

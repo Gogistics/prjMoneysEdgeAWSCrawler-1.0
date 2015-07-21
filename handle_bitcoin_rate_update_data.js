@@ -8,7 +8,6 @@ request
 	  //
 	  request.post({
 	  	url:'http://www.moneysedge.com/update_bitcoin_rate',
-	  	jar: cookie_jar,
 	  	form: { bitcoin_exchange_rate : { key : 'bitcoin_rate', value : '$274.28' } }}, function(err,httpResponse,body){
 	  		console.log(body);
 	  	});

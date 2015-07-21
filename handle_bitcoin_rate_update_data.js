@@ -4,8 +4,8 @@ request
   .on('response', function(response) {
 	  
     console.log(response)
-    console.log(response.headers['session'])
-    console.log(response.headers['csrftoken']) // 'image/png'
+    console.log(response.headers.cookie)
+    console.log(response.headers.cookie['csrftoken']) // 'image/png'
   });
   
   /*

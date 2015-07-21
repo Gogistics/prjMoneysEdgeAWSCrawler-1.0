@@ -181,5 +181,5 @@ if __name__ == "__main__":
         bitcoin_handler.get_btc_e_exchange_rate()
         bitcoin_handler.get_bityes_exchange_rate()
     except urllib2.HTTPError, err:
-        printerr
+        print err
     

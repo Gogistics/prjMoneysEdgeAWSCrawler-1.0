@@ -65,7 +65,7 @@ var loop_through_files_and_tweet = function(){
 	}
 	var yesterday = yyyy + '-' + mm + '-' + dd;
 	var summary_bistamp = get_bitcoin_exchange_rate_summary('/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/bitstamp/bitstamp_exchange_rate_' + yesterday + '.txt');
-	// var summary_btc_e = get_bitcoin_exchange_rate_summary('/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/btc_e/btc_e_exchange_rate_' + yesterday + '.txt');
+	var summary_btc_e = get_bitcoin_exchange_rate_summary('/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/btc_e/btc_e_exchange_rate_' + yesterday + '.txt');
 	var summary_coinbase = get_bitcoin_exchange_rate_summary('/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/coinbase/coinbase_exchange_rate_' + yesterday + '.txt');
 	var summary_coindesk = get_bitcoin_exchange_rate_summary('/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/coindesk/coindesk_exchange_rate_' + yesterday + '.txt');
 	var summary_itbit = get_bitcoin_exchange_rate_summary('/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/itbit/itbit_exchange_rate_' + yesterday + '.txt');
@@ -74,7 +74,7 @@ var loop_through_files_and_tweet = function(){
 	
 	
 	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bistamp.start_rate + ' current_rate:$' + summary_bistamp.close_rate + '(' + summary_bistamp.change_percentage + '%)' + ' #bitstamp @MoneysEdge http://www.moneysedge.com/bitcoin');
-	// tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_e.start_rate + ' current_rate:$' + summary_btc_e.close_rate + '(' + summary_btc_e.change_percentage + '%)' + ' #btc_e @MoneysEdge http://www.moneysedge.com/bitcoin');
+	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_e.start_rate + ' current_rate:$' + summary_btc_e.close_rate + '(' + summary_btc_e.change_percentage + '%)' + ' #btc_e @MoneysEdge http://www.moneysedge.com/bitcoin');
 	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_coinbase.start_rate + ' current_rate:$' + summary_coinbase.close_rate + '(' + summary_coinbase.change_percentage + '%)' + ' #coinbase @MoneysEdge http://www.moneysedge.com/bitcoin');
 	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_coindesk.start_rate + ' current_rate:$' + summary_coindesk.close_rate + '(' + summary_coindesk.change_percentage + '%)' + ' #coindesk @MoneysEdge http://www.moneysedge.com/bitcoin');
 	tweet_bitcoin_exchange_rate_summary( 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_itbit.start_rate + ' current_rate:$' + summary_itbit.close_rate + '(' + summary_itbit.change_percentage + '%)' + ' #itbit @MoneysEdge http://www.moneysedge.com/bitcoin');

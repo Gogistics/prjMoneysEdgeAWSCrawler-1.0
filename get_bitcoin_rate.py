@@ -182,13 +182,13 @@ if __name__ == "__main__":
         bitcoin_handler.get_coindesk_exchange_rate()
         bitcoin_handler.get_coinbase_exchange_rate()
         bitcoin_handler.get_bitstamp_exchange_rate()
-        bitcoin_handler.get_itbit_exchange_rate()
-        bitcoin_handler.get_lakebtc_exchange_rate()
-        bitcoin_handler.get_okcoin_exchange_rate()
         bitcoin_handler.get_bitfinex_exchange_rate()
         bitcoin_handler.get_btc_q_exchange_rate()
         bitcoin_handler.get_btc_e_exchange_rate()
         bitcoin_handler.get_bityes_exchange_rate()
+        bitcoin_handler.get_itbit_exchange_rate()
+        bitcoin_handler.get_lakebtc_exchange_rate()
+        bitcoin_handler.get_okcoin_exchange_rate()
     except urllib2.HTTPError, err:
         print err
     

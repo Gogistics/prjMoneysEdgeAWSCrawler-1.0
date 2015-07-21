@@ -25,7 +25,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "coinbase_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/coinbase/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/coinbase/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -39,7 +39,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "coindesk_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/coindesk/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/coindesk/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -53,7 +53,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "bitstamp_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/bitstamp/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/bitstamp/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -67,7 +67,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "btc_e_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/btc_e/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/btc_e/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -82,7 +82,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "itbit_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/itbit/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/itbit/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -97,7 +97,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "lakebtc_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/lakebtc/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/lakebtc/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -112,7 +112,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "okcoin_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/okcoin/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/okcoin/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content    
         
@@ -126,7 +126,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "bitfinex_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/bitfinex/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/bitfinex/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -140,7 +140,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "bityes_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/bityes/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/bityes/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -154,7 +154,7 @@ class BitcoinHandler():
 
         today = time.strftime('%Y-%m-%d')
         file_name = "btc_q_exchange_rate_{current_date}.txt".format(current_date = today)
-        file_path = "{path}{file_name}".format(path = '/var/www/prjTheEdge-Beta-1.0/media/static/frontend/files/bitcoin/btc_q/', file_name = file_name)
+        file_path = "{path}{file_name}".format(path = '../files/bitcoin/btc_q/', file_name = file_name)
         self.save_data(file_path, json.dumps(rate_info))
         return content
         
@@ -177,6 +177,6 @@ if __name__ == "__main__":
     bitcoin_handler.get_okcoin_exchange_rate()
     bitcoin_handler.get_bitfinex_exchange_rate()
     bitcoin_handler.get_btc_q_exchange_rate()
-    # bitcoin_handler.get_btc_e_exchange_rate()
-    # bitcoin_handler.get_bityes_exchange_rate()
+    bitcoin_handler.get_btc_e_exchange_rate()
+    bitcoin_handler.get_bityes_exchange_rate()
     

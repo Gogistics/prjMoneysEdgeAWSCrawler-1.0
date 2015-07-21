@@ -79,7 +79,7 @@ var loop_through_files_and_tweet = function(){
 	
 	//
 	var tweet_bitfinex = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitfinex.start_rate + ' current_rate:$' + summary_bitfinex.close_rate + '(' + summary_bitfinex.change_percentage + '%)' + ' #bitfinex @MoneysEdge http://www.moneysedge.com/bitcoin',
-		tweet_bistamp = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitstamp.start_rate + ' current_rate:$' + summary_bitstamp.close_rate + '(' + summary_bitstamp.change_percentage + '%)' + ' #bitstamp @MoneysEdge http://www.moneysedge.com/bitcoin',
+		tweet_bitstamp = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bitstamp.start_rate + ' current_rate:$' + summary_bitstamp.close_rate + '(' + summary_bitstamp.change_percentage + '%)' + ' #bitstamp @MoneysEdge http://www.moneysedge.com/bitcoin',
 		tweet_btc_e = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_e.start_rate + ' current_rate:$' + summary_btc_e.close_rate + '(' + summary_btc_e.change_percentage + '%)' + ' #btc_e @MoneysEdge http://www.moneysedge.com/bitcoin',
 		tweet_btc_q = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_btc_q.start_rate + ' current_rate:$' + summary_btc_q.close_rate + '(' + summary_btc_q.change_percentage + '%)' + ' #btc_q @MoneysEdge http://www.moneysedge.com/bitcoin',
 		tweet_bityes = 'bitcoin rate-' + yesterday + ' PDT start_rate:$' + summary_bityes.start_rate + ' current_rate:$' + summary_bityes.close_rate + '(' + summary_bityes.change_percentage + '%)' + ' #bityes @MoneysEdge http://www.moneysedge.com/bitcoin',

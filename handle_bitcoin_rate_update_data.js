@@ -2,9 +2,8 @@ var request = require('request');
 request
   .get('http://www.moneysedge.com')
   .on('response', function(response) {
-	  
-    console.log(response.headers)
-    console.log(response.headers.cookie)
+    	console.log(response.headers)
+	  	console.log(response.headers['set-cookie'])
   });
   
   /*

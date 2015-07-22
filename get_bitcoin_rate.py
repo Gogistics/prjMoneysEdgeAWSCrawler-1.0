@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import urllib2, json, time
+import urllib, urllib2, json, time
 
 class BitcoinHandler():
     def __init__(self):
@@ -176,6 +176,11 @@ class BitcoinHandler():
             print("Error on_data: %s" % str(e))
         return True
         
+    def update_bitcoin_exchange_rate(self, arg_url_with_query):
+        resp = urllib2.urlopen(arg_url_with_query)
+        print resp.read()
+        resp.close()
+        
 if __name__ == "__main__":
     try:
         bitcoin_handler = BitcoinHandler()
@@ -189,6 +194,9 @@ if __name__ == "__main__":
         bitcoin_handler.get_itbit_exchange_rate()
         bitcoin_handler.get_lakebtc_exchange_rate()
         bitcoin_handler.get_okcoin_exchange_rate()
+        
+        # update data in web server
+        
     except urllib2.HTTPError, err:
         print err
     

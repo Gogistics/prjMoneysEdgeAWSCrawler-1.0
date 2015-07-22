@@ -18,16 +18,16 @@ class BitcoinHandler():
         self._values = { 'bitcoin_exchange_rate' : '!alantai_*bitcoin_%analysis',
                         'current_time' : current_time,
                         'today' : today,
-                        'bitfinex' : '$267.45',
-                        'bitstamp' : '$265.82',
-                        'btc_q' : '$289.34',
-                        'btc_e' : '$241.27',
-                        'bityes' : '$256.92',
-                        'coindesk' : '$247.72',
-                        'coinbase' : '$287.37',
-                        'itbit' : '$273.18',
-                        'lakebtc' : '$273.01',
-                        'okcoin' : '$277.19' }
+                        'bitfinex' : '267.45',
+                        'bitstamp' : '265.82',
+                        'btc_q' : '289.34',
+                        'btc_e' : '241.27',
+                        'bityes' : '256.92',
+                        'coindesk' : '247.72',
+                        'coinbase' : '287.37',
+                        'itbit' : '273.18',
+                        'lakebtc' : '273.01',
+                        'okcoin' : '277.19' }
         
     def get_coinbase_exchange_rate(self):
         resp = urllib2.urlopen(self._coinbase_url)

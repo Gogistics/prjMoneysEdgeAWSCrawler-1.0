@@ -191,7 +191,14 @@ class BitcoinHandler():
         return True
         
     def update_bitcoin_exchange_rate(self, arg_url_with_query):
-        resp = urllib2.urlopen(arg_url_with_query)
+        url = 'http://www.moneysedge.com/update_bitcoin_rate?'
+        current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+        today = time.strftime('%Y-%m-%d')
+        
+        data = urllib.urlencode(values)
+        data = data.encode('utf-8') # data should be bytes
+    
+        resp = urllib2.urlopen(url + data)
         print resp.read()
         resp.close()
         

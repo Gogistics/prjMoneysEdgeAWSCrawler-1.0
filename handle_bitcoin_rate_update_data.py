@@ -6,6 +6,8 @@ def update_data():
     current_time = time.strftime('%Y-%m-%d %H:%M:%S')
     today = time.strftime('%Y-%m-%d')
     values = { 'bitcoin_exchange_rate' : '!alantai_*bitcoin_%analysis',
+            'current_time' : current_time,
+            'today' : today,
             'bitfinex' : '$267.45',
             'bitstamp' : '$265.82',
             'btc_q' : '$289.34',

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import urllib
+import urllib, urllib2
 
 def update_data():
     url = 'http://www.moneysedge.com/update_bitcoin_rate'

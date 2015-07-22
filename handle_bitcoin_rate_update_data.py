@@ -8,10 +8,11 @@ def update_data():
             
     data = urllib.urlencode(values)
     data = data.encode('utf-8') # data should be bytes
-    req = urllib.Request(url, data)
-    resp = urllib.urlopen(req)
+    
+    resp = urllib2.urlopen(url + data)
     print resp.read()
     resp.close()
+    
     
 if __name__ == "__main__":
     update_data()

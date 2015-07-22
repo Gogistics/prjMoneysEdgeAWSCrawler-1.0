@@ -37,6 +37,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['btc_to_usd']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['coinbase'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -51,6 +52,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['bpi']['USD']['rate']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['coindesk'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -65,6 +67,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['last']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['bitstamp'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -79,6 +82,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['ticker']['avg']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['btc_e'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -94,6 +98,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['lastPrice']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['itbit'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -109,6 +114,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['USD']['last']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['lakebtc'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -124,6 +130,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['ticker']['last']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['okcoin'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -138,6 +145,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['last_price']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['bitfinex'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -161,6 +169,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['ticker']['last']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['bityes'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')
@@ -175,6 +184,7 @@ class BitcoinHandler():
         rate = '{0:.2f}'.format(float(content['ticker'][0]['last']))
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         rate_info = { 'current_time' : current_time, 'rate' : rate}
+        self._values['btc_q'] = rate
         resp.close()
 
         today = time.strftime('%Y-%m-%d')

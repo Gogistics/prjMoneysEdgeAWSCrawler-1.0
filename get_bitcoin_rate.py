@@ -15,6 +15,8 @@ class BitcoinHandler():
         self._bityes_url = 'https://market.bityes.com/usd_btc/ticker.js'
         self._btc_q_url = 'https://www.btc-q.com/futuresApi/ticker.do'
         
+        current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+        today = time.strftime('%Y-%m-%d')
         self._values = { 'bitcoin_exchange_rate' : '!alantai_*bitcoin_%analysis',
                         'current_time' : current_time,
                         'today' : today,
@@ -190,12 +192,12 @@ class BitcoinHandler():
             print("Error on_data: %s" % str(e))
         return True
         
-    def update_bitcoin_exchange_rate(self, arg_url_with_query):
+    def update_bitcoin_exchange_rate(self):
         url = 'http://www.moneysedge.com/update_bitcoin_rate?'
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
         today = time.strftime('%Y-%m-%d')
         
-        data = urllib.urlencode(values)
+        data = urllib.urlencode(self._values)
         data = data.encode('utf-8') # data should be bytes
     
         resp = urllib2.urlopen(url + data)
@@ -217,6 +219,7 @@ if __name__ == "__main__":
         bitcoin_handler.get_okcoin_exchange_rate()
         
         # update data in web server
+        bitcoin_handler.update_bitcoin_exchange_rate()
         
     except urllib2.HTTPError, err:
         print err
